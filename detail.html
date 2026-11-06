@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiroStore - Detail Produk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-text">
+            <span class="loading-letter">W</span>
+            <span class="loading-letter">I</span>
+            <span class="loading-letter">R</span>
+            <span class="loading-letter">O</span>
+            <span class="loading-letter">S</span>
+            <span class="loading-letter">T</span>
+            <span class="loading-letter">O</span>
+            <span class="loading-letter">R</span>
+            <span class="loading-letter">E</span>
+        </div>
+        <div class="loading-line"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-top">
+                <div class="logo-section" onclick="goBack()" style="cursor: pointer;">
+                    <div class="logo-mark">W</div>
+                    <div class="logo-text">
+                        <h1 class="logo-title">WIROSTORE</h1>
+                        <p class="logo-subtitle">PREMIUM APPS MARKETPLACE</p>
+                    </div>
+                </div>
+                <div class="online-badge" id="onlineBadge">
+                    <span class="status-dot" id="mainStatusDot"></span>
+                    <span class="status-text" id="onlineStatusText">ONLINE</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <section class="detail-section">
+            <div class="detail-container">
+                <!-- Back Button -->
+                <button class="btn-back" onclick="goBack()">
+                    <span class="back-arrow">&lt;</span>
+                    <span class="back-text">Kembali ke Katalog</span>
+                </button>
+
+                <!-- Product Info -->
+                <div class="product-info" id="productInfo">
+                    <!-- Rendered by JS -->
+                </div>
+
+                <!-- Important Notes (Mandatory for all) -->
+                <div class="important-notes">
+                    <h4 class="notes-title">CATATAN PENTING</h4>
+                    <ul class="notes-list">
+                        <li>Bisa digunakan di semua perangkat (HP / Tablet / PC)</li>
+                        <li>Akses penuh ke semua fitur premium</li>
+                        <li>Wajib tanyakan ketersediaan stok ke admin sebelum order</li>
+                    </ul>
+                </div>
+
+                <!-- Pricing Section -->
+                <div class="pricing-section">
+                    <div class="pricing-header">
+                        <div class="pricing-label">PILIH PAKET</div>
+                        <h3 class="pricing-title">Daftar Harga</h3>
+                    </div>
+                    <div class="pricing-grid" id="pricingGrid">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">WIROSTORE</div>
+                    <p class="footer-tagline">Your Trusted Premium Apps Partner</p>
+                </div>
+                <div class="footer-info">
+                    <div class="info-item">
+                        <span class="info-label">ORDER VIA</span>
+                        <span class="info-value">WhatsApp</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">JAM OPERASIONAL</span>
+                        <span class="info-value">07:00 - 20:00 WIB</span>
+                        <div class="info-status">
+                            <span class="status-indicator" id="statusIndicator"></span>
+                            <span class="status-label" id="statusLabel">Memuat...</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">WAKTU SEKARANG</span>
+                        <span class="info-value" id="liveClock">--:--:--</span>
+                        <span class="info-sub">Waktu WIB Real-time</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright 2026 WiroStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="detail.js"></script>
+</body>
+</html>
