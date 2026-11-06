@@ -1,5 +1,5 @@
 // GANTI NOMOR WHATSAPP DI SINI (format: 628xxx tanpa + atau 0 di depan)
-const WHATSAPP_NUMBER = '6281234567890';
+const WHATSAPP_NUMBER = '6281387242476';
 
 const productsData = {
     'alight-motion': {
@@ -127,8 +127,10 @@ function renderPricing(product) {
     `).join('');
 }
 
+// FUNGSI ORDER WHATSAPP YANG SUDAH DIUPDATE
 function orderViaWA(productName, packageName, price) {
-    const message = `Halo Admin WiroStore.\n\nSaya ingin melakukan pemesanan:\nProduk: ${productName}\nPaket: ${packageName}\nHarga: Rp ${formatPrice(price)}\n\nMohon informasi ketersediaan stok dan metode pembayarannya. Terima kasih.`;
+    // Format teks otomatis sesuai permintaan
+    const message = `Halo Bang Wiro, saya mau order ${productName} ${packageName} Rp ${formatPrice(price)}. Ada gak stoknya?`;
     
     const encodedMessage = encodeURIComponent(message);
     const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
@@ -144,7 +146,7 @@ function goBack() {
     }, 300);
 }
 
-// --- Time & Status Logic (Sama dengan index) ---
+// --- Time & Status Logic ---
 function getWIBTime() {
     const now = new Date();
     const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
